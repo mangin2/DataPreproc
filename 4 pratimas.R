@@ -1,0 +1,6 @@
+setwd("D:\\KTU\\Taikomoji matematika\\4 Ketvirtas semestras\\3. PDTIV\\Pratybos 4")
+library(haven)
+library(tidyverse)
+donate<-read_sas("donate.sas7bdat")
+donate1 <- donate %>% pivot_longer(-ID, names_to="Q", values_to = "donate_rate")
+View(donate1)
